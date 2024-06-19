@@ -1,1 +1,406 @@
 <!-- css homework write code here -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Homework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.973);
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+        }
+
+        .logo {
+            /* border: 1px dashed red; */
+            flex: 1 1 40%;
+            text-align: center;
+        }
+
+        .logo p:first-child {
+            font-weight: bold;
+            /* border: 1px dashed ; */
+        }
+
+        .logo p:last-child {
+            font-size: 10px;
+        }
+
+        .navbar {
+            flex: 1 1 60%;
+        }
+
+        .navigation {
+            display: flex;
+            list-style: none;
+
+        }
+
+        .navigation a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 1em;
+        }
+
+        .welcome {
+            background-image: url(pic.jpg);
+            background-size: cover;
+            /* background-position: center; */
+            background-blend-mode: overlay;
+            background-color: rgba(253, 253, 253, 0.377);
+            height: 100vh;
+            text-align: center;
+            align-items: center;
+            padding-top: 100px;
+            /* border: 1px solid ; */
+        }
+
+        .welcome p {
+            margin: 15px;
+            letter-spacing: 3px;
+        }
+
+        .welcome p:nth-child(2) {
+            font-size: 7em;
+            font-weight: bold;
+            letter-spacing: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 6px 10px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background-color: black;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            color: black;
+            background-color: white;
+        }
+
+        .about {
+            /* border: 1px solid red; */
+            background-color: white;
+            height: 80vh;
+            display: flex;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+        }
+
+        .about .info {
+            flex: 1 1 50%;
+
+        }
+
+        .container {
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+
+        hr {
+            color: black;
+            background-color: black;
+
+            padding: 0;
+            border: 0;
+            width: 30px;
+            height: 3px;
+        }
+
+        .info p {
+            margin: 10px;
+        }
+
+        .container p:nth-child(2) {
+            font-weight: bold;
+            font-size: 2.5em;
+            letter-spacing: 5px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            /* border: 1px dashed red; */
+            /* background-color: aqua; */
+        }
+
+        /* .info p:nth-child(4),.info p:nth-child(5) {
+            display: flex;
+        } */
+        .about .img {
+            background-image: url(pic2.jpg);
+            background-size: cover;
+
+            background-color: blueviolet;
+            flex: 1 1 50%;
+        }
+
+        .help {
+            background-image: url(pic.jpg);
+            background-size: cover;
+            /* background-position: center; */
+            background-blend-mode: overlay;
+            background-color: rgba(253, 253, 253, 0.377);
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+        }
+
+        .container_t {
+            flex: 1 1 20%;
+        }
+
+        .help .container_t {
+            font-weight: bold;
+            font-size: 2.5em;
+            padding-top: 30px;
+            padding-left: 50px;
+            /* border: 1px solid red; */
+        }
+
+        .container_t p {
+            margin-top: 10px;
+            letter-spacing: 3px;
+        }
+
+        .container_h {
+            /* border: 1px dashed black; */
+            flex: 1 1 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .container_h>* {
+            height: 80%;
+            width: 20%;
+            border: 5px solid black;
+            text-align: center;
+            padding: 0px 0px;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .h hr {
+            width: 80%;
+            height: 2px;
+        }
+
+        .container_h .h p:first-child {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .container_b {
+            /* border: 1px  dashed yellow; */
+            flex: 1 1 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact {
+            background-color: rgb(33, 199, 199);
+            height: 80vh;
+            display: flex;
+        }
+
+        .contact1 {
+            justify-content: center;
+
+        }
+
+        .contact1 .text {
+            /* border: 1px dashed red; */
+            height: 60%;
+            width: 50%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+        }
+
+        .icon i {
+            padding: 5px;
+        }
+
+        .contact1,
+        .form {
+            /* border: 1px dashed red; */
+            width: 50%;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+
+        form {
+            height: 100%;
+            width: 80%;
+            /* border: 1px solid red;    */
+
+        }
+
+        form * {
+            margin: 5px;
+            background-color: rgba(0, 255, 255, 0);
+        }
+
+        form input,
+        form textarea {
+            border: 1px solid black;
+        }
+
+        form input:not(.button) {
+            height: 2em;
+            width: 250px;
+        }
+
+        form:first-child {
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <p>ALLAN JOHNSON</p>
+            <p>Personal Life Coach</p>
+        </div>
+        <div class="navbar">
+            <ul class="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="home" class="welcome">
+        <p>AMBITION IS THE FIRST STEP TOWARDS</p>
+        <p>SUCCESS</p>
+        <p>Now Available for Online Coaching</p>
+        <p><a href="#" class="button">Book Now</a></p>
+    </div>
+
+    <div id="about" class="about">
+        <div class="info">
+            <div class="container">
+                <hr>
+                <p>ABOUT <br>ME</p>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
+                    double click me to
+                    add your own content and make changes to the font. Feel free to drag and drop me anywhere you like
+                    on your page. ​</p>
+
+                <p>This is a great space to write long text about your company and your services. You can use this space
+                    to go into a
+                    little more detail about your company. Talk about your team and what services you provide.</p>
+
+            </div>
+            <div class="btn">
+                <p><a href="#" class="button">Read More</a></p>
+                <p><a href="#" class="button">Free Consultation</a></p>
+            </div>
+        </div>
+        <div class="img"></div>
+    </div>
+
+    <div id="product" class="help">
+        <div class="container_t">
+            <hr>
+            <p>HOW I CAN <br> HELP YOU</p>
+        </div>
+        <div class="container_h">
+            <div class="h container1">
+                <p>Free Consultation</p>
+                <p>Use this area to describe one of your services.</p>
+                <hr>
+                <p>45 min</p>
+                <p><a href="#" class="button">Book It</a></p>
+            </div>
+            <div class="h container2">
+                <p>Online Coaching</p>
+                <p>Use this area to describe one of your services.</p>
+                <hr>
+                <p>1 hr</p>
+                <p>$70</p>
+                <p><a href="#" class="button">Book It</a></p>
+            </div>
+            <div class="h container3">
+                <p>Self-Improvement Workshop</p>
+                <p>Use this area to describe one of your services.</p>
+                <hr>
+                <p>Mon, Tue, Wed, Thu, Fri</p>
+                <p>1 hr</p>
+                <p>$90</p>
+                <p><a href="#" class="button">Book It</a></p>
+            </div>
+        </div>
+        <div class="container_b">
+            <p><a href="#" class="button">More sevices</a></p>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <div class="contact1">
+            <div class="text">
+                <hr>
+                <h1>CONTACT</h1>
+                <p>500 Terry Francine Street,<br>San Francisco, CA 94158</p>
+                <p>Tel: 123-456-7890 <br>Fax: 123-456-7890</p>
+                <div class="icon">
+                    <p>info@mysite.com</p>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <form action="http://jkorpela.fi/cgi-bin/echo.cgi">
+                <label for="name">Enter Your Name</label><br>
+                <input type="text" name="name" value=""><br>
+                <label for="mail">Enter Your Email*</label><br>
+                <input type="text" name="mail" value=""><br>
+                <label for="subject">Enter Your Subject</label><br>
+                <input type="text" name="subject" value=""><br>
+                <p>Message</p>
+                <textarea name="text" rows="10" cols="60"></textarea>
+                <br>
+                <div style=";width: 88%;text-align: right;">
+                    <input class="button" type="submit" value="Submit">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
